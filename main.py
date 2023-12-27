@@ -22,7 +22,7 @@ if height >= 120:
     if photo == "y":
       print ("You have to pay 8$")
     else:
-      print("You have to pay 5$")
+      print("You have to pay 6$")
 
       
       
