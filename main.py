@@ -1,32 +1,39 @@
-print ("Hello welcome to the rollerocatser!")
-height = int(input("What is your height in centimeres?: "))
+first_choice = input(("Hello, welcome to Tresure island \nYour goal is to find the treasure \nYou are at a crosswalk, would you like to go left or right: \n"))
 
-if height >= 120:
-  
-  print("You are tall enough to ride the rollercoaster!")
-  photo = input("Would you like a photo taken during your ride [extra 3$] ? (y/n): ")
-  age = int(input("What is your age?: "))
-  if age >= 45 and age <= 55:
-    print ("Your ticket is free!")
-  elif age >= 18:
-    if photo == "y":
-      print ("You have to pay 18$")
+if first_choice == "left":
+  print ("You chose left, you walked into a cave")
+  second_choice = input("You see an old man, would you like to talk to him? \nY/N \n")
+  if second_choice == "Y":
+    print("He ate you! You died, try again")
+  elif second_choice == "N":
+    third_choice = input(("You walked away, and survived from his attacks. You see a light. Do you approach it? \nY/N"))
+    if third_choice == "Y":
+      print ("Congrats, you made it out safley and found the tressure")
     else:
-      print("You have to pay 15$")
-  elif 12 <= age <= 17:
-    if photo == "y":
-      print ("You have to pay 13$")
-    else:
-      print("You have to pay 10$")
+      print ("The old man sneaked up on you and killed you, try again")
   else:
-    if photo == "y":
-      print ("You have to pay 8$")
-    else:
-      print("You have to pay 6$")
+    print ("You died of starvation because you didn't choose Y or N, try again.")
+    
+    
+    
+          
 
-      
-      
-  
+elif first_choice == "right":
+  print ("You chose right, you walked into a forest")
+bear = input("You see a bear, would you like to fight it? \n Y/N")
+if bear == "Y":
+  print ("The bear ripped you to shreds, you died, try again")
+elif bear == "N":
+  map = input("You see a map, would you like to follow it? \n Y/N")
+  if map == "Y":
+    print ("The map led you the wrong way, into pirates who killed you, try again")
+  elif map == "N":
+    print ("Congrats, you decided to go with your guts and found the tressure 2 minutes later!")
+  else:
+    print("You chose to go nowhere, which led to the bear finding and killing you, try again")
+
+
 else:
-  print("You are not tall enough to ride the rollercoaster!")
+  print("You didn't chose to go left or right, you died waiting for a decision, try again")
+
 
